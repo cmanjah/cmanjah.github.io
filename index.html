@@ -28,14 +28,16 @@
         const redirect = new URLSearchParams(window.location.search).get('p');
         if (!redirect) return;
 
-        const normalizedPath = `/${redirect}`
-          .replace(/~and~/g, '&')
-          .replace(/\/{2,}/g, '/');
+        const normalizedPath = `/${redirect}`.replace(/~and~/g, '&').replace(/\/{2,}/g, '/');
 
         const query = new URLSearchParams(window.location.search).get('q');
         const restoredQuery = query ? `?${query.replace(/~and~/g, '&')}` : '';
 
-        window.history.replaceState(null, '', `${normalizedPath}${restoredQuery}${window.location.hash}`);
+        window.history.replaceState(
+          null,
+          '',
+          `${normalizedPath}${restoredQuery}${window.location.hash}`
+        );
       })();
     </script>
     <script type="module" crossorigin src="/assets/index-B8qbqtTa.js"></script>
