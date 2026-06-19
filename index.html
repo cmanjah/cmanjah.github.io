@@ -4,8 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Charles Anjah Portfolio</title>
-    <script type="module" crossorigin src="/assets/index-Y4brBEsO.js"></script>
+    <title>Charles Anjah</title>
+    <meta
+      name="description"
+      content="Portfolio of Charles Anjah, Senior AI Research Engineer and AI Solution Architect building production-grade AI systems across healthcare, finance, and open multimodal research."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charles Anjah" />
+    <meta
+      property="og:description"
+      content="Portfolio of Charles Anjah, Senior AI Research Engineer and AI Solution Architect building production-grade AI systems across healthcare, finance, and open multimodal research."
+    />
+    <meta property="og:url" content="https://www.charlesanjah.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Charles Anjah" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Charles Anjah, Senior AI Research Engineer and AI Solution Architect building production-grade AI systems across healthcare, finance, and open multimodal research."
+    />
+    <link rel="canonical" href="https://www.charlesanjah.com/" />
+    <script>
+      (function () {
+        const redirect = new URLSearchParams(window.location.search).get('p');
+        if (!redirect) return;
+
+        const normalizedPath = `/${redirect}`
+          .replace(/~and~/g, '&')
+          .replace(/\/{2,}/g, '/');
+
+        const query = new URLSearchParams(window.location.search).get('q');
+        const restoredQuery = query ? `?${query.replace(/~and~/g, '&')}` : '';
+
+        window.history.replaceState(null, '', `${normalizedPath}${restoredQuery}${window.location.hash}`);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-B8qbqtTa.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-D3axwQbO.css">
   </head>
 

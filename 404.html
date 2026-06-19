@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        const { protocol, hostname, port, pathname, search, hash } = window.location;
+        const portPart = port ? `:${port}` : '';
+        const path = pathname.replace(/^\//, '').replace(/&/g, '~and~');
+        const query = search ? `&q=${search.slice(1).replace(/&/g, '~and~')}` : '';
+        const destination = `${protocol}//${hostname}${portPart}/?p=${path}${query}${hash}`;
+        window.location.replace(destination);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
